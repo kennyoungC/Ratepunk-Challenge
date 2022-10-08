@@ -1,0 +1,19 @@
+@import "../Styles/Index.scss";
+
+.navbar {
+  @include flexbox(row);
+  padding: 16px 0;
+  ul {
+    @include flexbox(row);
+    list-style: none;
+    gap: 16px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: #88ccec;
+    }
+  }
+}
