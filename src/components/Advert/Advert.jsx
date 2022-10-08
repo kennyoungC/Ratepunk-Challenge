@@ -8,18 +8,24 @@ const Advert = () => {
     <div className="section-2">
       <div className="container">
         <div className="ad-container">
-          <div>
-            <img src={chrome} alt="chrome icon" />
-            <p>
-              available in the <strong>chrome web store</strong>
-            </p>
-          </div>
-          <div>
-            <img src={apple} alt="apple icon" />
-            <p>
-              available in the <strong>apple web store</strong>
-            </p>
-          </div>
+          <a href="https://chrome.google.com/webstore/detail/ratepunk-same-hotel-way-c/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk">
+            <div>
+              <img src={chrome} alt="chrome icon" />
+              <p>
+                available in the <br />
+                <strong>chrome web store</strong>
+              </p>
+            </div>
+          </a>
+          <a href="https://apps.apple.com/app/ratepunk/id1607823726">
+            <div>
+              <img src={apple} alt="apple icon" />
+              <p>
+                available in the <br />
+                <strong>apple web store</strong>
+              </p>
+            </div>
+          </a>
           <div>
             <div>
               <img src={star} alt="star icon" />
