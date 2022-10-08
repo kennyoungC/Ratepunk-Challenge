@@ -1,3 +1,5 @@
+import Advert from "./components/Advert/Advert"
+import Mainpage from "./components/Main_Page/Mainpage"
 import NavBar from "./components/Navbar/NavBar"
 
 function App() {
@@ -5,6 +7,8 @@ function App() {
     <div>
       <NavBar />
       <hr className="line"></hr>
+      <Mainpage />
+      <Advert />
     </div>
   )
 }

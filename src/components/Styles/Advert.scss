@@ -1,0 +1,28 @@
+@import "../Styles/Index.scss";
+
+.section-2 {
+  background-color: #45565e;
+}
+
+.ad-container {
+  @include flexbox(row);
+  color: #fff;
+  div:first-child {
+    border: 1px solid black;
+    padding: 12px 16px;
+    border-radius: 11px;
+    @include flexbox(row);
+  }
+  div:nth-of-type(2) {
+    border: 1px solid black;
+    border-radius: 11px;
+    padding: 12px 16px;
+    @include flexbox(row);
+  }
+  div:nth-of-type(3) {
+    border: 1px solid black;
+    border-radius: 11px;
+    border-radius: 11px;
+    @include flexbox(row);
+  }
+}
