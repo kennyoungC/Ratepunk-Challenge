@@ -92,6 +92,14 @@ $layout-breakpoint-small: 600px;
           border-radius: 4px;
           border: 1px solid black;
           margin-bottom: 12px;
+          padding: 12px 20px 12px 20px;
+          background-image: url("../../assets/email.svg");
+          background-repeat: no-repeat;
+          background-position: 5px 10px;
+          text-indent: 20px;
+          &:focus {
+            background-image: none;
+          }
         }
       }
       button {
