@@ -31,7 +31,6 @@ const Mainpage = () => {
         },
         body: JSON.stringify({ email }),
       })
-      await resp.json()
       if (resp.ok) {
         setShowReferral(true)
         setEmail("")
