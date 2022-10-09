@@ -1,10 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import "../Styles/Mainpage.css"
 import checked from "../../assets/success.svg"
 import invite from "../../assets/invite.svg"
 import collectCoins from "../../assets/collect-coins.svg"
 import voucher from "../../assets/voucher.svg"
 const Mainpage = () => {
+  const [email, setEmail] = useState("")
+  const [emailIsValid, setEmialIsValid] = useState(true)
+  const handleInput = (e) => {
+    const val = e.target.value
+    setEmialIsValid(true)
+    setEmail(val)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (email.trim() === "" || !email.includes("@")) {
+      setEmialIsValid(false)
+      return
+    }
+  }
   return (
     <section className="section-1">
       <div className="cont">
@@ -16,7 +30,7 @@ const Mainpage = () => {
               give you 1 coin for each friend that installs our extension.
               Minimum cash-out at 20 coins.
             </p>
-            <div className="form-container">
+            <div className="form-container hidden">
               <div>
                 <img src={checked} alt="check-" />
                 <p>Your email is confirmed!</p>
@@ -28,6 +42,17 @@ const Mainpage = () => {
                 />
                 <button>Copy</button>
               </div>
+            </div>
+            <div className="form-container-2">
+              {!emailIsValid && <p>Error State</p>}
+              <div className="form-control">
+                <input
+                  onChange={handleInput}
+                  type="email"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <button onClick={handleSubmit}>Get Referral Link</button>
             </div>
             <p>Limits on max rewards apply.</p>
           </div>

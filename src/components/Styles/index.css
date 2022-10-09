@@ -13,4 +13,8 @@
 
 hr.line {
   border-top: 2px solid black;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

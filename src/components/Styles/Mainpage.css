@@ -15,6 +15,10 @@ hr.line {
   border-top: 2px solid black;
 }
 
+.hidden {
+  display: none;
+}
+
 .section-1 {
   background-color: #f8cc5d;
 }
@@ -88,6 +92,31 @@ hr.line {
   border: 1px solid black;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  cursor: pointer;
+}
+.mainpage_section .first_row .form-container-2 {
+  margin-bottom: 96px;
+}
+.mainpage_section .first_row .form-container-2 p {
+  color: red;
+  margin-bottom: 6px;
+}
+.mainpage_section .first_row .form-container-2 .form-control input {
+  height: 42px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-bottom: 12px;
+}
+.mainpage_section .first_row .form-container-2 button {
+  width: 100%;
+  padding: 12px;
+  height: 42px;
+  background-color: #4eb3e3;
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 4px;
   cursor: pointer;
 }
 .mainpage_section .second_row {
