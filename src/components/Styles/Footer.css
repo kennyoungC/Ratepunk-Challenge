@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+
+hr.line {
+  border-top: 2px solid black;
+}
+
+.footer-section {
+  background-color: #ecd8f1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 48px 0px;
+}
+.footer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 450px;
+}
+.footer > div:first-child p:last-of-type {
+  color: #6b6b6b;
+}
+.footer div:nth-of-type(2) h4 {
+  margin-bottom: 12px;
+}
+.footer div:nth-of-type(2) ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+.footer div:nth-of-type(2) ul a {
+  text-decoration: none;
+  color: black;
+}
+.footer div:nth-of-type(2) ul a:hover {
+  color: #88ccec;
+}
+.footer > div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 58px;
+}
+.footer > div:last-of-type h4 {
+  margin-bottom: 12px;
+}
+.footer > div:last-of-type .contact-box div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+.footer > div:last-of-type .contact-box div a {
+  text-decoration: none;
+  color: black;
+}
+.footer > div:last-of-type .social-box h4 {
+  margin-bottom: 12px;
+}
+.footer > div:last-of-type .social-box > div {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.footer > div:last-of-type .social-box > div div {
+  border-radius: 6px;
+  background-color: #4eb3e3;
+  padding: 6px;
+  border: 1px solid #444;
+}
+.footer > div:last-of-type .social-box > div div img {
+  width: 15px !important;
+  height: 15px !important;
+  width: 100%;
+}/*# sourceMappingURL=Footer.css.map */
