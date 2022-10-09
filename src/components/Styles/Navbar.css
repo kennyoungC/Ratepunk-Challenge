@@ -43,11 +43,15 @@ hr.line {
 }
 .navbar .mobile-navbar .navlist-mobile {
   background-color: #fff;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   list-style: none;
-  top: 100%;
-  padding: 12px 0;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  top: 145%;
+  right: -22px;
+  padding: 12px 24px;
 }
 .navbar .mobile-navbar .navlist-mobile li {
   padding: 12px 6px;
@@ -73,5 +77,13 @@ hr.line {
   }
   .navbar .mobile-navbar {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .border {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
   }
 }/*# sourceMappingURL=Navbar.css.map */

@@ -7,7 +7,7 @@ const NavBar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
   return (
-    <div className="cont">
+    <div className="cont border">
       <div className="navbar">
         <div className="desktop-navbar">
           <div>

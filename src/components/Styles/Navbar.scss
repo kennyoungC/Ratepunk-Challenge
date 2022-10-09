@@ -26,11 +26,15 @@ $layout-breakpoint-small: 600px;
     position: relative;
     .navlist-mobile {
       background-color: #fff;
-      width: 100%;
+      width: 100vw;
       position: absolute;
       list-style: none;
-      top: 100%;
-      padding: 12px 0;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      top: 145%;
+      right: -22px;
+      padding: 12px 24px;
       li {
         padding: 12px 6px;
       }
@@ -52,5 +56,12 @@ $layout-breakpoint-small: 600px;
     .mobile-navbar {
       display: none;
     }
+  }
+}
+.border {
+  @media (max-width: $layout-breakpoint-small) {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
   }
 }
