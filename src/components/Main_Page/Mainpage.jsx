@@ -7,18 +7,40 @@ import voucher from "../../assets/voucher.svg"
 const Mainpage = () => {
   const [email, setEmail] = useState("")
   const [emailIsValid, setEmialIsValid] = useState(true)
+  const [showReferral, setShowReferral] = useState(false)
+  const [copySuccess, setCopySuccess] = useState("")
   const handleInput = (e) => {
     const val = e.target.value
     setEmialIsValid(true)
     setEmail(val)
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (email.trim() === "" || !email.includes("@")) {
       setEmialIsValid(false)
       return
     }
+    try {
+      const resp = await fetch("https://api.jsonbin.io/v3/b", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Master-Key":
+            "$2b$10$58TtTmKocwavUXd3jEDQhuJopyl0Tx5uGK9iiqbPBPdABE01.jfeq",
+          "X-Bin-Name": "Emails",
+        },
+        body: JSON.stringify({ email }),
+      })
+      await resp.json()
+      if (resp.ok) {
+        setShowReferral(true)
+        setEmail("")
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
+
   return (
     <section className="section-1">
       <div className="cont">
@@ -30,30 +52,59 @@ const Mainpage = () => {
               give you 1 coin for each friend that installs our extension.
               Minimum cash-out at 20 coins.
             </p>
-            <div className="form-container hidden">
-              <div>
-                <img src={checked} alt="check-" />
-                <p>Your email is confirmed!</p>
+            {showReferral && (
+              <div className="form-container ">
+                <div>
+                  <img src={checked} alt="check-" />
+                  <p>Your email is confirmed!</p>
+                </div>
+                <div className="mobile-confirm-section">
+                  <input
+                    placeholder="https://ratepunk.com/referral"
+                    type="text"
+                  />
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        "https://ratepunk.com/referral"
+                      )
+                      setCopySuccess("Copied!")
+                    }}
+                  >
+                    {copySuccess ? copySuccess : "Copy URL"}
+                  </button>
+                </div>
+                <div className="desktop-confirm-section">
+                  <input
+                    placeholder="https://ratepunk.com/referral"
+                    type="text"
+                  />
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        "https://ratepunk.com/referral"
+                      )
+                      setCopySuccess("Copied!")
+                    }}
+                  >
+                    {copySuccess ? copySuccess : "copy"}
+                  </button>
+                </div>
               </div>
-              <div>
-                <input
-                  placeholder="https://ratepunk.com/referral"
-                  type="text"
-                />
-                <button>Copy</button>
+            )}
+            {!showReferral && (
+              <div className="form-container-2">
+                {!emailIsValid && <p>Error State</p>}
+                <div className="form-control">
+                  <input
+                    onChange={handleInput}
+                    type="email"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <button onClick={handleSubmit}>Get Referral Link</button>
               </div>
-            </div>
-            <div className="form-container-2">
-              {!emailIsValid && <p>Error State</p>}
-              <div className="form-control">
-                <input
-                  onChange={handleInput}
-                  type="email"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              <button onClick={handleSubmit}>Get Referral Link</button>
-            </div>
+            )}
             <p>Limits on max rewards apply.</p>
           </div>
           <div className="second_row">

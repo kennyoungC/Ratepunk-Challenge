@@ -44,7 +44,7 @@ $layout-breakpoint-small: 600px;
       img {
         width: 24px;
       }
-      div:last-child {
+      .desktop-confirm-section {
         display: flex;
         gap: 0;
         width: 100%;
@@ -72,6 +72,10 @@ $layout-breakpoint-small: 600px;
           cursor: pointer;
         }
       }
+    }
+
+    .mobile-confirm-section {
+      display: none;
     }
     .form-container-2 {
       margin-bottom: 96px;
@@ -131,7 +135,35 @@ $layout-breakpoint-small: 600px;
   @media (max-width: $layout-breakpoint-small) {
     @include flexbox(column);
     gap: 48px;
-
+    .first_row {
+      .form-container {
+        .desktop-confirm-section {
+          display: none;
+        }
+        .mobile-confirm-section {
+          display: block;
+          margin-bottom: 96px;
+          input {
+            height: 42px;
+            padding: 12px;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid black;
+            margin-bottom: 12px;
+          }
+          button {
+            width: 100%;
+            padding: 12px;
+            height: 42px;
+            background-color: #4eb3e3;
+            color: #fff;
+            border: 1px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
     .second_row {
       // display: grid;
       grid-template-columns: 1fr;

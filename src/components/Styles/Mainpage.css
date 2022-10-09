@@ -66,13 +66,13 @@ hr.line {
 .mainpage_section .first_row .form-container img {
   width: 24px;
 }
-.mainpage_section .first_row .form-container div:last-child {
+.mainpage_section .first_row .form-container .desktop-confirm-section {
   display: flex;
   gap: 0;
   width: 100%;
   margin-bottom: 96px;
 }
-.mainpage_section .first_row .form-container div:last-child input {
+.mainpage_section .first_row .form-container .desktop-confirm-section input {
   height: 42px;
   padding: 12px;
   width: 100%;
@@ -82,7 +82,7 @@ hr.line {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.mainpage_section .first_row .form-container div:last-child button {
+.mainpage_section .first_row .form-container .desktop-confirm-section button {
   padding: 12px;
   height: 42px;
   background-color: #4eb3e3;
@@ -93,6 +93,9 @@ hr.line {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   cursor: pointer;
+}
+.mainpage_section .first_row .mobile-confirm-section {
+  display: none;
 }
 .mainpage_section .first_row .form-container-2 {
   margin-bottom: 96px;
@@ -150,6 +153,31 @@ hr.line {
     align-items: center;
     flex-direction: column;
     gap: 48px;
+  }
+  .mainpage_section .first_row .form-container .desktop-confirm-section {
+    display: none;
+  }
+  .mainpage_section .first_row .form-container .mobile-confirm-section {
+    display: block;
+    margin-bottom: 96px;
+  }
+  .mainpage_section .first_row .form-container .mobile-confirm-section input {
+    height: 42px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-bottom: 12px;
+  }
+  .mainpage_section .first_row .form-container .mobile-confirm-section button {
+    width: 100%;
+    padding: 12px;
+    height: 42px;
+    background-color: #4eb3e3;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
   }
   .mainpage_section .second_row {
     grid-template-columns: 1fr;
