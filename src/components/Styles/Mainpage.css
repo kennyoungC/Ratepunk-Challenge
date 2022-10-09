@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 1440px;
+.cont {
+  max-width: 900px;
   margin: 0 auto;
   padding: 16px 20px;
 }
@@ -113,4 +113,41 @@ hr.line {
   font-family: "Gochi Hand", cursive;
   font-size: 24px;
   margin-bottom: 12px;
+}
+@media (max-width: 600px) {
+  .mainpage_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .mainpage_section .second_row {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  .mainpage_section .second_row .img-box {
+    justify-self: center;
+  }
+  .mainpage_section .second_row div:nth-of-type(1) {
+    order: 1;
+  }
+  .mainpage_section .second_row div:nth-of-type(2) {
+    order: 2;
+  }
+  .mainpage_section .second_row div:nth-of-type(3) {
+    order: 4;
+  }
+  .mainpage_section .second_row div:nth-of-type(4) {
+    order: 3;
+  }
+  .mainpage_section .second_row div:nth-of-type(5) {
+    order: 5;
+  }
+  .mainpage_section .second_row div:nth-of-type(6) {
+    order: 6;
+  }
 }/*# sourceMappingURL=Mainpage.css.map */

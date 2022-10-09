@@ -10,7 +10,7 @@ import tiktok from "../../assets/tiktok.svg"
 const Footer = () => {
   return (
     <footer className="footer-section">
-      <div className="container ">
+      <div className="cont">
         <div className="footer">
           <div>
             <img src={logo} alt="logo icon" />
@@ -75,6 +75,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <p>&copy; 2021 Ratepunk. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

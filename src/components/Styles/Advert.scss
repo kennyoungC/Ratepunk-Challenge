@@ -1,4 +1,5 @@
 @import "../Styles/Index.scss";
+$layout-breakpoint-small: 600px;
 
 .section-2 {
   background-color: #45565e;
@@ -50,6 +51,20 @@
     div {
       @include flexbox(row);
       gap: 6px;
+    }
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    @include flexbox(column);
+    align-items: center;
+    justify-content: center !important;
+    gap: 24px;
+    a:first-child > div {
+      padding: 12px 32px;
+      width: 100%;
+    }
+    a:nth-of-type(2) > div {
+      padding: 12px 40px;
+      width: 100%;
     }
   }
 }

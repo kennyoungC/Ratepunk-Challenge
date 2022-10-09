@@ -5,13 +5,13 @@ import NavBar from "./components/Navbar/NavBar"
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
       <hr className="line"></hr>
       <Mainpage />
       <Advert />
       <Footer />
-    </div>
+    </>
   )
 }
 

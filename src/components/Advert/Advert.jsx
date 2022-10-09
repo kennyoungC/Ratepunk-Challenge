@@ -6,7 +6,7 @@ import star from "../../assets/star.svg"
 const Advert = () => {
   return (
     <div className="section-2">
-      <div className="container">
+      <div className="cont">
         <div className="ad-container">
           <a href="https://chrome.google.com/webstore/detail/ratepunk-same-hotel-way-c/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk">
             <div>

@@ -1,13 +1,15 @@
 @import "../Styles/Index.scss";
+$layout-breakpoint-small: 600px;
 
 .navbar {
-  @include flexbox(row);
-  ul {
-    @include flexbox(row);
-    list-style: none;
-    gap: 16px;
+  max-width: 900px;
+  .desktop-navbar {
+    display: none;
   }
 
+  .mobile-navbar {
+    display: block;
+  }
   a {
     :first-of-type {
       color: #88ccec;
@@ -16,6 +18,39 @@
     text-decoration: none;
     &:hover {
       color: #88ccec;
+    }
+  }
+
+  .mobile-navbar {
+    @include flexbox(row);
+    position: relative;
+    .navlist-mobile {
+      background-color: #fff;
+      width: 100%;
+      position: absolute;
+      list-style: none;
+      top: 100%;
+      padding: 12px 0;
+      li {
+        padding: 12px 6px;
+      }
+    }
+    .menu-icon {
+      display: block;
+      z-index: 10;
+    }
+  }
+  @media (min-width: $layout-breakpoint-small) {
+    .desktop-navbar {
+      @include flexbox(row);
+      .navlist {
+        @include flexbox(row);
+        list-style: none;
+        gap: 16px;
+      }
+    }
+    .mobile-navbar {
+      display: none;
     }
   }
 }
