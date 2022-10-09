@@ -117,9 +117,6 @@ hr.line {
   background-position: 5px 10px;
   text-indent: 20px;
 }
-.mainpage_section .first_row .form-container-2 .form-control input:focus {
-  background-image: none;
-}
 .mainpage_section .first_row .form-container-2 button {
   width: 100%;
   padding: 12px;
